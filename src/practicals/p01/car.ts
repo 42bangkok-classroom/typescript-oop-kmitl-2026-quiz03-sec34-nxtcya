@@ -8,7 +8,7 @@ export class Car {
     }
 
     start():void{
-        console.log("Toyota Camry is starting...")
+        console.log("is starting...")
 
     }
     accelerate():void{
