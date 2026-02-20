@@ -3,8 +3,8 @@ export class Car {
     model?:string ;
 
     constructor(brand?:string,model?:string){
-        this.brand = brand 
-        this.model = model
+        this.brand = brand;
+        this.model = model;
     }
 
     start():void{
