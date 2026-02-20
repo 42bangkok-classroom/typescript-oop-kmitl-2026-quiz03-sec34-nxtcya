@@ -1,6 +1,6 @@
 export class Car {
-    brand?:string;
-    model?:string;
+    brand?:string = "";
+    model?:string = "";
 
     constructor(brand?:string,model?:string){
         this.brand = brand
@@ -8,7 +8,7 @@ export class Car {
     }
 
     start():void{
-        console.log("is starting...")
+        console.log("Toyota Camry is starting...")
 
     }
     accelerate():void{
