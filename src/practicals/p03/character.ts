@@ -9,8 +9,10 @@ class Character{
       
     }
 
-    getName(name:string):void{
-        
+    getName(name:string){
+        return this.name = 
+    }
+
     }
 
     reciveDamage(damage:number):void{
