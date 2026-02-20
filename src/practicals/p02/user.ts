@@ -1,9 +1,9 @@
 export class User {
-    firstname:string;
-    lastname:string;
-    private _age:string;
+    firstname?:string;
+    lastname?:string;
+    private _age?:string;
 
-    constructor(firstname:string,lastname:string,age:string){
+    constructor(firstname?:string,lastname?:string,age?:string){
         this.firstname = firstname;
         this.lastname = lastname;
         this._age = age;
