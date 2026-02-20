@@ -8,18 +8,18 @@ export class Car {
     }
 
     start(){
-        console.log(`${this.brand}${this.model} is starting...`)
+        console.log(`${this.brand}${this.model} is starting...`);
 
     }
     accelerate(){
-        console.log(`${this.brand}${this.model} is accelerating...`)
+        console.log(`${this.brand}${this.model} is accelerating...`);
     }
     brake(){
-        console.log(`${this.brand}${this.model} is braking...`)
+        console.log(`${this.brand}${this.model} is braking...`);
 
     }
     stop(){
-        console.log(`${this.brand}${this.model} is stopping...`)
+        console.log(`${this.brand}${this.model} is stopping...`);
     }
 
 }
