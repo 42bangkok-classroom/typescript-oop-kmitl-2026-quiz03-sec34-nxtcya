@@ -7,18 +7,18 @@ export class Car {
         this.model = model;
     }
 
-    start():void{
+    start(){
         console.log("Toyota Camry is starting...")
 
     }
-    accelerate():void{
+    accelerate(){
         console.log("Toyota Camry is accelerating...")
     }
-    brake():void{
+    brake(){
         console.log("Toyota Camry is braking...")
 
     }
-    stop():void{
+    stop(){
         console.log("Toyota Camry is stopping...")
     }
 
