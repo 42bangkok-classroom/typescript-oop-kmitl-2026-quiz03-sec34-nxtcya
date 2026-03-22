@@ -1,51 +1,31 @@
-class Character{
-    name:string;
-    health : number = 100
-     
-
-    constructor(name:string,hp:number){
-       this.name = name;
-       this.health = hp
-      
+export class Character{
+    constructor(
+        protected name: string = "",
+        protected health:number = 100
+    ){}
+    getName(){
+        return this.name;
     }
-
-    getName(name:string){
-        return this.name = 
+    getHealth(){
+        return this.health;
     }
-
-    }
-
-    reciveDamage(damage:number):void{
+    receiveDamage(damage:number){
         this.health -= damage
-        console.log("Damage :",damage +" " +" HP : ",this.health)
-        if(this.health < 0){
-            this.health = 0
-           
-
-        }
-
     }
 
 
-    }
-
-class Warrior extends Character{
-    armor:number
-
-    constructor(name:string,hp:number,armor:number){
-        super(name,hp);
-        
-    }
-
-    attack():void{
-    
-        }
-
-    override reciveDamage(damage: number): void {
-        let realDamage = damage - this.armor;
-        if(realDamage < 0){
-            realDamage = 0;
-        }
-        super.reciveDamage(realDamage);
-    }
 }
+
+// 1. ต้อง `export class Character` และ `export class Warrior extends Character`
+// 2. `Character` ต้องมี attribute `name` และ `health`
+//    - `health` มีค่าเริ่มต้นเป็น 100
+// 3. `Character` ต้องมี method:
+//    - `getName()`
+//    - `getHealth()`
+//    - `receiveDamage(damage: number)`: ลดเลือดตาม damage ที่ได้รับ
+// 4. `Warrior` ต้องมี constructor รับค่า `name`, `weapon` และ `health` (optional ใน parent แต่ warrior รับมา)
+// 5. `Warrior` ต้องมี attribute `weapon` และ method `getWeapon()`
+// 6. `Warrior` ต้อง override method `receiveDamage(damage: number)`
+//    - ความสามารถพิเศษ: อ่านได้จากใน comment ของโค้ดไฟล์ index.ts
+// 7. ห้ามใช้ `any`
+// 8. ห้ามใช้ `console.log` ภายใน class

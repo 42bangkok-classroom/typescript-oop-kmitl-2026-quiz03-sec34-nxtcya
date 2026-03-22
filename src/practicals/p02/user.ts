@@ -1,29 +1,27 @@
 export class User {
-    firstname?:string;
-    lastname?:string;
-    private _age?:string;
-
-    constructor(firstname?:string,lastname?:string,age?:string){
-        this.firstname = firstname;
-        this.lastname = lastname;
+    static BIRTH_YEAR:number = 0;
+    constructor(public firstname?:string,public lastname?:string,private _age?:number){}
+    setFirstname(x:string){
+        if(!x) throw new Error(`Invalid`);
+        this.firstname = x
+    }
+    setLastname(y:string){
+        if(!y) throw new Error();
+        this.lastname = y;
+    }
+    setAge(age:number){
+        if(age < 0 ) throw new Error("invalid");
         this._age = age;
+        
+        const currentYear  = new Date().getFullYear();
+        User.BIRTH_YEAR = currentYear - age;
     }
-
-    setFirstname(){
-        return this.firstname
-    }
-
-    setLastname(){
-        return this.lastname
-    }
-
-    setAge(){
+    getAge(){
         return this._age
     }
-
-    getFullName(fullname:string):string{
-        return fullname = this.firstname + this.lastname
-        
+    getFullName(){
+        return `${this.firstname}  ${this.lastname} `  
     }
-}
 
+
+}
