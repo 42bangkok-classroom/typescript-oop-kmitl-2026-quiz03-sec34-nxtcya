@@ -6,11 +6,11 @@ export class User {
         this.firstname = x
     }
     setLastname(y:string){
-        if(!y) throw new Error();
+        if(!y) 
         this.lastname = y;
     }
     setAge(age:number){
-        if(age < 0 ) throw new Error("invalid");
+        if(age < 0 ) 
         this._age = age;
         
         const currentYear  = new Date().getFullYear();
@@ -20,7 +20,7 @@ export class User {
         return this._age
     }
     getFullName(){
-        return `${this.firstname} ${this.lastname} `  
+        return `${this.firstname} ${this.lastname}`  
     }
 
 
