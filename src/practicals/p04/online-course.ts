@@ -29,7 +29,7 @@ export class OnlineCourse {
 
     public getCourseStatus():string{
         if(this._isOpen === false){
-            return `close`
+            return `closed`
         }
         return `Open`
     }
