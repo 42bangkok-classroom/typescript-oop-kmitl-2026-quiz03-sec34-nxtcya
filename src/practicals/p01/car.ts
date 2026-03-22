@@ -2,16 +2,16 @@ export class Car {
     constructor(public brand?:string,public model?:string){}
 
         start(){
-            console.log(`${this.brand} ${this.model} is stating...`);
+            console.log(`${this.brand} ${this.model} is starting...`);
         }
         accelerate(){
-            console.log(`${this.brand} ${this.model} is acceleratiin...`);
+            console.log(`${this.brand} ${this.model} is accelerating...`);
         }
         brake(){
-            console.log(`${this.brand} ${this.model} id brack...`);
+            console.log(`${this.brand} ${this.model} id bracking...`);
         }
         stop(){
-            console.log(`${this.brand} ${this.model} id stoping...`);
+            console.log(`${this.brand} ${this.model} id stopping...`);
         }
     
 }
