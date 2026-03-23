@@ -9,8 +9,9 @@ export class Warrior extends Character {
   }
 
   receiveDamage(damage: number): void {
-    const reduceDamage = damage * 0.1
-    this.health -= reduceDamage;
+    if(damage < 0) return;
+    const reduceDamage = damage * 0.9
+    super.receiveDamage(reduceDamage);
 
   }
   
