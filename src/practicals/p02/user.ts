@@ -2,12 +2,10 @@ export class User {
     static BIRTH_YEAR:number = 0;
     constructor(public firstname?:string,public lastname?:string,private _age?:number){}
     setFirstname(x:string): void{
-        if(!x) return;
-        this.firstname = x
+        if(x) this.firstname = x;
     }
     setLastname(y:string) :void{
-        if(!y) return;
-        this.lastname = y;
+        if(y) this.lastname = y;
     }
     setAge(age:number){
         if(age < 0 ) return ;
