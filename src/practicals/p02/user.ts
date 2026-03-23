@@ -10,7 +10,7 @@ export class User {
         this.lastname = y;
     }
     setAge(age:number){
-        if(age < 0 ) 
+        if(age < 0 ) return ;
         this._age = age;
         
         const currentYear  = new Date().getFullYear();
