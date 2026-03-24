@@ -1,43 +1,42 @@
 export class OnlineCourse {
+    public courseName : string;
+    public maxStudent:number;
+    private _enrolledStudents:number;
+    private _isOpen:boolean;
 
-    constructor(
-        public courseName :string,
-        public MaxStudent:number,
-        private _enrolledStudents:number = 0,
-        private _isOpen : boolean = true
-    ){}
+    constructor(courseName:string,maxStudent:number){
+        this.courseName = courseName;
+        this.maxStudent = maxStudent;
+        this._enrolledStudents = 0
+        this._isOpen = true
+    }
+
+    private canenroll():boolean{
+        return this._isOpen && this._enrolledStudents < this.maxStudent
+    }
 
     public enroll():boolean{
-        if(this.canEnroll()){
-            this._enrolledStudents += 1;
+        if(this.canenroll()){
+            this._enrolledStudents++
             return true;
         }
-        return false
-        }
+        return false;
+
+    }
 
     public closeCourse():void{
-        this._isOpen = false
-            
-        }
-
-    
+        this._isOpen = false;
+    }
 
     public getAvailableSeats():number{
-        return this.MaxStudent - this._enrolledStudents
-        
+        return this.maxStudent - this._enrolledStudents
     }
 
     public getCourseStatus():string{
-        if(this._isOpen === false){
-            return `Closed`
-        }
-        return `Open`
+        return this._isOpen ? "Open" : "Closed"
+
     }
 
-    private canEnroll():boolean{
-        return this._isOpen && this._enrolledStudents < this.MaxStudent
-        
-}
 }
 
 
